@@ -1,6 +1,6 @@
 package singleton.register;
 
-public class Test {
+public class EnumSingletonTest {
     public static void main(String[] args) {
         EnumSingleton.getInstance().setCustomField("123123");
         Object customField = EnumSingleton.INSTANCE.getCustomField();
