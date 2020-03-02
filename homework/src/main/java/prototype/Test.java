@@ -9,7 +9,7 @@ public class Test {
         Student student = new Student();
         student.setId(1);
         student.setName("小明");
-        List<String> courses = new ArrayList<>();
+        List<String> courses = new ArrayList<String>();
         courses.add("语文");
         courses.add("数学");
         student.setCourses(courses);
