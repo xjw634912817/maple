@@ -21,6 +21,12 @@
             <artifactId>cglib</artifactId>
             <version>RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
     
 </project>
