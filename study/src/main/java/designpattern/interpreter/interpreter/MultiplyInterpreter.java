@@ -1,7 +1,5 @@
 package designpattern.interpreter.interpreter;
 
-import designpattern.interpreter.IArithmeticInterpreter;
-
 public class MultiplyInterpreter extends Interpreter {
 
     public MultiplyInterpreter(IArithmeticInterpreter left, IArithmeticInterpreter right) {

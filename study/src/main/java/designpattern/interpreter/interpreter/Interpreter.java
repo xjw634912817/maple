@@ -1,7 +1,5 @@
 package designpattern.interpreter.interpreter;
 
-import designpattern.interpreter.IArithmeticInterpreter;
-
 /**
  * 非终结表达式
  */
