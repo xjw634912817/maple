@@ -1,5 +1,7 @@
 package concurrent.concurrenthashmap;
 
+import com.google.common.collect.Maps;
+
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Test {
@@ -11,6 +13,8 @@ public class Test {
             concurrentHashMap.put("key" + i, i);
         }
         concurrentHashMap.size();
+
+        Maps.newHashMapWithExpectedSize(10);
     }
 
 }
