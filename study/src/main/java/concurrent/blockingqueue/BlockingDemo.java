@@ -12,7 +12,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  *           take() 阻塞，队列为空阻塞
  */
 public class BlockingDemo {
-    ArrayBlockingQueue<String> arrayBlockingQueue = new ArrayBlockingQueue(10);
+    ArrayBlockingQueue<String> arrayBlockingQueue = new ArrayBlockingQueue<>(10);
     LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue();
 
     {
