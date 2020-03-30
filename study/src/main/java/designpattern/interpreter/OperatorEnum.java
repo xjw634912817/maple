@@ -19,7 +19,7 @@ public enum OperatorEnum {
         this.priority = priority;
     }
 
-    boolean isPriorityLessThanEquals(OperatorEnum dest) {
+    public boolean isPriorityLessThanEquals(OperatorEnum dest) {
         return this.getPriority() <= dest.getPriority();
     }
 

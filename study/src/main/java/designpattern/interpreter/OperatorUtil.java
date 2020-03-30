@@ -47,4 +47,19 @@ public class OperatorUtil {
         }
     }
 
+    public static int calculate(Integer left, Integer right, OperatorEnum operatorEnum) {
+        switch (operatorEnum) {
+            case ADD:
+                return left + right;
+            case SUBTRACT:
+                return left - right;
+            case MULTIPLY:
+                return left * right;
+            case DIVIDE:
+                return left / right;
+            default:
+        }
+        return 0;
+    }
+
 }
