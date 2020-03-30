@@ -10,8 +10,5 @@ public class Test {
         IPerson person = meiPo.getInstance(new ZhangSan());
         person.findLove();
         person.speak("啊啊啊");
-
-
-
     }
 }

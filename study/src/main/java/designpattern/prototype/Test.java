@@ -17,7 +17,7 @@ public class Test {
         add(clone);
     }
 
-    public static  <T extends Student & Cloneable> T add(T t) {
+    public static <T extends Student & Cloneable> T add(T t) {
         return t;
     }
 }

@@ -11,7 +11,7 @@ public class ContainerSingleton {
 
     private static Map<String, Object> ioc = new ConcurrentHashMap<String, Object>();
 
-    private ContainerSingleton(){
+    private ContainerSingleton() {
 
     }
 

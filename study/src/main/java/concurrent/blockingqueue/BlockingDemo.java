@@ -19,7 +19,7 @@ public class BlockingDemo {
         init();
     }
 
-    void init () {
+    void init() {
         new Thread(() -> {
             while (true) {
                 try {
@@ -50,6 +50,4 @@ public class BlockingDemo {
             blockingDemo.add("i" + i);
         }
     }
-    
-    
 }

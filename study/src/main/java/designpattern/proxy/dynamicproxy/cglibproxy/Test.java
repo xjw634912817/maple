@@ -5,7 +5,6 @@ import net.sf.cglib.core.DebuggingClassWriter;
 
 public class Test {
     /**
-     *
      * Cglib采用继承的方式，覆盖父类的方法
      * JDK采用实现的方式，必须要求代理的目标对象一定要实现一个借口
      * 思想：都是通过生成字节码，重组成一个新的类
@@ -16,7 +15,6 @@ public class Test {
      * cglib 有个坑：会忽略final修饰的方法
      *
      * JDK Proxy 生成逻辑较为简单，执行效率要低，每次都要用反射
-     *
      */
     public static void main(String[] args) {
         System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "E:\\cglib_proxy_class");

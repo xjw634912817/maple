@@ -7,7 +7,7 @@ public class ReentrantLockDemo {
     static ReentrantLock reentrantLock = new ReentrantLock();
 
     static void test() {
-        if(reentrantLock.tryLock()) {
+        if (reentrantLock.tryLock()) {
             // 这行不能写代码 确保一定要释放锁
             try {
                 // doSomeThing

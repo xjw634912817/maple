@@ -15,7 +15,7 @@ public class DoubleCheckSingleton {
 
     public static DoubleCheckSingleton getInstance() {
         if (instance == null) {
-            synchronized(DoubleCheckSingleton.class) {
+            synchronized (DoubleCheckSingleton.class) {
                 if (instance == null) {
                     // 存在指令重排序的问题
                     // new一个对象在指令层面非原子性操作

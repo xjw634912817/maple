@@ -3,7 +3,7 @@ package concurrent.cyclicbarrier;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
-public class DataImportThread implements Runnable{
+public class DataImportThread implements Runnable {
 
     private CyclicBarrier cyclicBarrier;
     private String fileName;

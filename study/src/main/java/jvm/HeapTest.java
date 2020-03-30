@@ -15,7 +15,7 @@ public class HeapTest {
 
     }
 
-    static class Person{
+    static class Person {
         String name;
 
         public String getName() {

@@ -33,16 +33,16 @@ public class OperatorUtil {
         switch (operatorEnum) {
             case ADD:
                 numberStack.push(new AddInterpreter(left, right));
-                return ;
+                return;
             case SUBTRACT:
                 numberStack.push(new SubtractInterpreter(left, right));
-                return ;
+                return;
             case MULTIPLY:
                 numberStack.push(new MultiplyInterpreter(left, right));
-                return ;
+                return;
             case DIVIDE:
                 numberStack.push(new DivideInterpreter(left, right));
-                return ;
+                return;
             default:
         }
     }

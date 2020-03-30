@@ -23,5 +23,5 @@ public class SerializableSingleton implements Serializable {
     private Object readResolve() {
         return INSTANCE;
     }
-    
+
 }

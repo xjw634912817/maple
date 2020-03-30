@@ -12,10 +12,10 @@ public class Sender implements Runnable {
     @Override
     public void run() {
         String[] packets = {
-          "First packet",
-          "Second packet",
-          "Third packet",
-          "End"
+                "First packet",
+                "Second packet",
+                "Third packet",
+                "End"
         };
 
         for (String packet : packets) {

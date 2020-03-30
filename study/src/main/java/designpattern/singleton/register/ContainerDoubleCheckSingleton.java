@@ -11,7 +11,7 @@ public class ContainerDoubleCheckSingleton {
 
     private static Map<String, Object> ioc = new ConcurrentHashMap<String, Object>();
 
-    private ContainerDoubleCheckSingleton(){
+    private ContainerDoubleCheckSingleton() {
 
     }
 
