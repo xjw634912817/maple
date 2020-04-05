@@ -1,0 +1,16 @@
+<?xmlPerson version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maple.springboot.mybatis.mapper.XmlPersonMapper">
+    <resultMap id="BaseResultMap" type="com.maple.springboot.mybatis.bean.XmlPerson">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="my_test" jdbcType="VARCHAR" property="myTest"/>
+    </resultMap>
+
+    <select id="selectById" resultType="com.maple.springboot.mybatis.bean.XmlPerson"
+            resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from person where id = #{id}
+    </select>
+
+</mapper>

@@ -16,9 +16,9 @@ public interface PersonMapper {
     @Update("update person set name = #{name}, age = #{age} where id = #{id}")
     int updateByPrimaryKey(Person person);
 
-    @Select("select id, name, age from person where id = #{id}")
+    @Select("select * from person where id = #{id}")
     Person selectByPrimaryKey(Integer id);
 
-    @Select("select id, name, age from person")
+    @Select("select * from person")
     List<Person> selectAll();
 }
