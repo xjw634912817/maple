@@ -1,15 +1,15 @@
-package com.maple.springboot.mybatis.bean;
+package com.maple.springboot.mybatis.domain;
 
-public class Person {
+public class XmlPerson {
     private Integer id;
     private String name;
     private Integer age;
     private String myTest;
 
-    public Person() {
+    public XmlPerson() {
     }
 
-    public Person(Integer id, String name, Integer age) {
+    public XmlPerson(Integer id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;

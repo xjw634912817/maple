@@ -1,0 +1,18 @@
+<?xmlPerson version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maple.springboot.mybatis.mapper.ShopMapper">
+    <resultMap id="BaseResultMap" type="com.maple.springboot.mybatis.domain.Shop">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="range" jdbcType="VARCHAR" property="range" typeHandler="com.maple.springboot.mybatis.util.CommaTypeHandler"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.maple.springboot.mybatis.domain.Shop">
+        insert into shop value (#{id}, #{range,jdbcType=VARCHAR,typeHandler=com.maple.springboot.mybatis.util.CommaTypeHandler})
+    </insert>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select * from shop
+    </select>
+
+
+</mapper>

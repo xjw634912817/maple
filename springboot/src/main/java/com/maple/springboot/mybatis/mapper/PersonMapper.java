@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.mapper;
 
-import com.maple.springboot.mybatis.bean.Person;
+import com.maple.springboot.mybatis.domain.Person;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

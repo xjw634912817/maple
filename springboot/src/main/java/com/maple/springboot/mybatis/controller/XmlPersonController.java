@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.controller;
 
-import com.maple.springboot.mybatis.bean.XmlPerson;
+import com.maple.springboot.mybatis.domain.XmlPerson;
 import com.maple.springboot.mybatis.service.IXmlPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,5 +38,10 @@ public class XmlPersonController {
     @RequestMapping("/findAll")
     public List<XmlPerson> findAll() {
         return xmlService.selectAllXml();
+    }
+
+    @RequestMapping("/testTypeHandler")
+    public List<XmlPerson> testTypeHandler() {
+        return xmlService.testTypeHandler();
     }
 }

@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.service;
 
-import com.maple.springboot.mybatis.bean.XmlPerson;
+import com.maple.springboot.mybatis.domain.XmlPerson;
 
 import java.util.List;
 
@@ -14,4 +14,7 @@ public interface IXmlPersonService {
     XmlPerson selectById(Integer id);
 
     List<XmlPerson> selectAllXml();
+
+    List<XmlPerson> testTypeHandler();
+
 }

@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.controller;
 
-import com.maple.springboot.mybatis.bean.Person;
+import com.maple.springboot.mybatis.domain.Person;
 import com.maple.springboot.mybatis.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.mapper;
 
-import com.maple.springboot.mybatis.bean.XmlPerson;
+import com.maple.springboot.mybatis.domain.XmlPerson;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -17,4 +17,6 @@ public interface XmlPersonMapper {
     XmlPerson selectById(@Param("id") Integer id);
 
     List<XmlPerson> selectAll();
+
+    List<XmlPerson> testTypeHandler();
 }

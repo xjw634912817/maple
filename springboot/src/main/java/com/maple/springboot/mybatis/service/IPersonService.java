@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.service;
 
-import com.maple.springboot.mybatis.bean.Person;
+import com.maple.springboot.mybatis.domain.Person;
 
 import java.util.List;
 

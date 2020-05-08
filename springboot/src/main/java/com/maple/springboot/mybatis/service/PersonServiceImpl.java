@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.service;
 
-import com.maple.springboot.mybatis.bean.Person;
+import com.maple.springboot.mybatis.domain.Person;
 import com.maple.springboot.mybatis.mapper.PersonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

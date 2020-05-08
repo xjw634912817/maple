@@ -1,6 +1,6 @@
 package com.maple.springboot.mybatis.service;
 
-import com.maple.springboot.mybatis.bean.XmlPerson;
+import com.maple.springboot.mybatis.domain.XmlPerson;
 import com.maple.springboot.mybatis.mapper.XmlPersonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,4 +36,10 @@ public class XmlPersonServiceImpl implements IXmlPersonService {
     public List<XmlPerson> selectAllXml() {
         return xmlPersonMapper.selectAll();
     }
+
+    @Override
+    public List<XmlPerson> testTypeHandler() {
+        return xmlPersonMapper.testTypeHandler();
+    }
+
 }
