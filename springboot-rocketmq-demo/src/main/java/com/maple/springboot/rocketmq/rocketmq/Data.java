@@ -1,4 +1,4 @@
-package com.maple.springboot.rocketmq;
+package com.maple.springboot.rocketmq.rocketmq;
 
 import java.io.Serializable;
 

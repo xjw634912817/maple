@@ -1,4 +1,4 @@
-package com.maple.springboot.rocketmq;
+package com.maple.springboot.rocketmq.rocketmq;
 
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.messaging.support.MessageBuilder;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-//@RestController
+@RestController
 @RequestMapping("/mq")
 public class RocketMqTest {
 
