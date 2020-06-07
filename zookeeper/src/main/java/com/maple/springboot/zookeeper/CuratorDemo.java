@@ -11,8 +11,13 @@ public class CuratorDemo {
         CuratorFramework curatorFramework = CuratorFrameworkFactory.builder()
                 .connectString("localhost:2181") // 地址
                 .sessionTimeoutMs(5000) // 超时时间
+//                .namespace("/lock")  // 命名空间
                 .retryPolicy(new ExponentialBackoffRetry(1000, 3)) // 重试策略
                 .build();
+        //namespace: 值得注意的是 session 会话含有隔离命名空间，即
+        //客户端对 Zookeeper 上数据节点的任何操作都是相对/lock
+        //目录进行的，这有利于实现不同的 Zookeeper 的业务之间的隔离
+
         // 重试策略
         // ExponentialBackoffRetry 衰减重试，基础1s，重试3次
         // RetryOneTime 重试一次
