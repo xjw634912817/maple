@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="20190713-01" author="solo">
+        <createTable tableName="project_info">
+            <column name="project_id" type="varchar(64)" encoding="utf8" remarks="项目id">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="project_name" type="varchar(255)" encoding="utf8" remarks="项目名字"/>
+            <column name="project_difficulty" type="float" encoding="utf8" remarks="项目难度"/>
+            <column name="category_id" type="varchar(64)" encoding="utf8" remarks="项目类型类目编号"/>
+            <column name="project_status" type="int(11)" encoding="utf8" remarks="项目状态, 0招募中，1 进行中，2已完成，3失败，4延期，5删除"/>
+            <column name="project_desc" type="varchar(512)" encoding="utf8" remarks="项目简介"/>
+            <column name="project_creater_id" type="varchar(64)" encoding="utf8" remarks="项目创建者id"/>
+            <column name="team_id" type="varchar(64)" encoding="utf8" remarks="项目所属团队id"/>
+            <column name="create_time" type="bigint(64)" encoding="utf8" remarks="创建时间"/>
+            <column name="update_time" type="bigint(64)" encoding="utf8" remarks="更新时间"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="project_info"/>
+        </rollback>
+    </changeSet>
+
+
+</databaseChangeLog>
