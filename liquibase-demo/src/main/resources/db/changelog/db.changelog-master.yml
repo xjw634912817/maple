@@ -1,0 +1,90 @@
+databaseChangeLog:
+  - changeSet:
+      # 唯一id，建议使用Flayway的命名格式'V<version>[_<SEQ>][__description]'
+      id: V1.0_0__init
+      # 作者
+      author: Cheivin
+      # 描述
+      comment: "初始化脚本内容，加载初始数据"
+      # 启用事物
+      runInTransaction: true
+      # 变更脚本
+      changes:
+        # 创建表格
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  remarks:
+              - column:
+                  name: username
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+#        # 加载数据
+#        - loadData:
+#            tableName: user
+#            columns:
+#              - column:
+#                  header: username
+#                  name: username
+#              - column:
+#                  header: password
+#                  name: password
+#            encoding: UTF-8
+#            file: db/data/init-data.csv
+        # 标记，用于回滚时指定版本
+        - tagDatabase:
+            tag: V1.0_0__init
+
+# 在databaseChangeLog后追加
+  - changeSet:
+      id: V1.0_1__mod
+      author: Cheivin
+      comment: "修改用户表，增加账单表"
+      runInTransaction: true
+      changes:
+        # 通过标准格式添加字段
+        - addColumn:
+            # 目标表
+            tableName: user
+            columns:
+              - column:
+                  name: state
+                  type: tinyint
+                  # 默认值
+                  defaultValueNumeric: 0
+                  remarks: '用户状态,0:未激活,1:激活,-1:禁用'
+              - column:
+                  name: identity
+                  type: int
+                  # 默认值
+                  defaultValueNumeric: 999
+                  remarks: '用户身份，999:管理员'
+        # 通过sql语句操作数据库
+        - sql:
+            sql: insert into user (username,password,state,identity) values ('admin','admin',1,999)
+#        # 通过sql文件操作数据库
+#        - sqlFile:
+#            encoding: utf8
+#            path: db/changelog/V1.0_1__mod_bill.sql
+        - tagDatabase:
+            tag: V1.0_1__mod
+        # 回滚语句
+        - rollback:
+            - delete:
+                tableName: user
+                where: username='admin'
+            - dropTable:
+                tableName: user_bill
