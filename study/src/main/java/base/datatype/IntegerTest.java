@@ -1,4 +1,4 @@
-package base;
+package base.datatype;
 
 public class IntegerTest {
 

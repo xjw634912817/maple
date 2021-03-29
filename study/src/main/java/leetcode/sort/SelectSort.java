@@ -9,7 +9,7 @@ public class SelectSort {
     /**
      * 时间复杂度：O(n^2)
      * 空间复杂度：O(1)
-     * 稳定性分析：不稳定
+     * 稳定性分析：不稳定 例如2,2,1
      */
     public static void main(String[] args) {
         int[] data = SortUtil.data();
