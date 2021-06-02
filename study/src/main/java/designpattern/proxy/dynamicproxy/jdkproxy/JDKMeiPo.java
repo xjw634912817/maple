@@ -1,20 +1,18 @@
 package designpattern.proxy.dynamicproxy.jdkproxy;
 
 
-import designpattern.proxy.dynamicproxy.IPerson;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class JDKMeiPo implements InvocationHandler {
-    private IPerson target;
+    private Object target;
 
     // 入参其实可以改成Object 代理所有有实现接口的对象
-    public IPerson getInstance(IPerson target) {
+    public Object getInstance(Object target) {
         this.target = target;
-        Class<? extends IPerson> targetClass = target.getClass();
-        return (IPerson) Proxy.newProxyInstance(targetClass.getClassLoader(), targetClass.getInterfaces(), this);
+        Class<?> targetClass = target.getClass();
+        return Proxy.newProxyInstance(targetClass.getClassLoader(), targetClass.getInterfaces(), this);
     }
 
     @Override

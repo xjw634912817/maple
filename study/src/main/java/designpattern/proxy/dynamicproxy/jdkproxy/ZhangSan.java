@@ -15,6 +15,6 @@ public class ZhangSan implements IPerson {
     }
 
     public void mySelfMethod() {
-
+        System.out.println("self method");
     }
 }
