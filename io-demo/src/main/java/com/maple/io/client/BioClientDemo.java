@@ -9,12 +9,12 @@ import java.net.Socket;
 public class BioClientDemo {
 
     public static void main(String[] args) throws IOException {
-        Socket socket = new Socket(InetAddress.getLocalHost(), 9090);
+//        Socket socket = new Socket(InetAddress.getLocalHost(), 9090);
+        Socket socket = new Socket("127.0.0.1", 9090);
         try (OutputStream outputStream = socket.getOutputStream(); InputStream inputStream = socket.getInputStream()) {
             outputStream.write("我是客户端，我来了！".getBytes());
             outputStream.flush();
-
-
+            
             byte[] buf = new byte[1024];
             int length = inputStream.read(buf);
             if (length > 0) {
