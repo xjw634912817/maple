@@ -29,6 +29,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- AOP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
         <!-- 自定义的starter包，根据是否有装载fastjson来决定注入到IOC容器的Bean -->
         <dependency>
             <groupId>com.maple.springboot</groupId>
