@@ -1,4 +1,4 @@
-package designpattern.creation.singleton.serializable;
+package designpattern.creation.singleton.destroysingleton;
 
 import java.io.Serializable;
 
@@ -18,7 +18,7 @@ public class SerializableSingleton implements Serializable {
     }
 
     /**
-     * 用到了桥接模式
+     * 用到了桥接模式，防止序列化，反序列化破坏单例
      */
     private Object readResolve() {
         return INSTANCE;

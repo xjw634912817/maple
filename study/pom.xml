@@ -42,6 +42,12 @@
             <version>20200518</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+
 
         <!--asm依赖，测试方法区溢出-->
         <dependency>
