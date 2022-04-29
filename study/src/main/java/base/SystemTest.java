@@ -21,10 +21,10 @@ public class SystemTest {
         System.out.println("============= start call gc method =====");
         System.gc();
         System.out.println("============= end call gc method =====");
-        
-        byte[] source = new byte[]{1,2,3,4};
+
+        byte[] source = new byte[]{1, 2, 3, 4};
         byte[] target = new byte[3];
-        
+
         // 浅拷贝
         System.arraycopy(source, 1, target, 0, 2);
         System.out.println(JSONObject.valueToString(target));

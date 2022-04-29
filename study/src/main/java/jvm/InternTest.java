@@ -23,11 +23,11 @@ public class InternTest {
         System.out.println(System.identityHashCode(st3));
         System.out.println(System.identityHashCode(st3.intern()));
         System.out.println("=============");
-        
+
         String st4 = new String("jeremy_test");
         System.out.println(st4 == st4.intern());
         System.out.println(System.identityHashCode(st4));
         System.out.println(System.identityHashCode(st4.intern()));
     }
-    
+
 }

@@ -1,13 +1,13 @@
 package jvm.visible;
 
 public class Test {
-    
+
     boolean done = false;
     int a = 0;
     int b = 0;
-    
+
     void f1() {
-        while(!done) {
+        while (!done) {
             a++;
 //            try {
 //                Thread.sleep(1);
@@ -21,11 +21,11 @@ public class Test {
     void f2() {
         done = true;
     }
-    
+
     void f3() {
         // nothing
     }
-    
+
 
     public static void main(String[] args) throws InterruptedException {
         Test test = new Test();
@@ -33,5 +33,5 @@ public class Test {
         Thread.sleep(1000);
         new Thread(test::f2).start();
     }
-    
+
 }

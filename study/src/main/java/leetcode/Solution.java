@@ -64,7 +64,7 @@ class Solution {
                 LinkedList<Integer> list1 = tmp.get(left);
                 LinkedList<Integer> list2 = tmp.get(right);
                 int newKey = list2.getLast();
-                for(Integer num : list2) {
+                for (Integer num : list2) {
                     list1.addFirst(num);
                 }
                 tmp.remove(left);
@@ -83,7 +83,7 @@ class Solution {
             }
         }
         int[] resa = null;
-        
+
         for (LinkedList<Integer> res : tmp.values()) {
             resa = new int[res.size()];
             for (int i = 0; i < res.size(); i++) {

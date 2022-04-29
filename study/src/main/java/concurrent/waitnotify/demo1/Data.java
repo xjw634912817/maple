@@ -4,7 +4,7 @@ package concurrent.waitnotify.demo1;
  * 5.1 为什么在while循环中包含wait（）？
  * 由于notify（）和notifyAll（）随机唤醒正在此对象监视器上等待的线程，因此满足条件并不总是很重要。
  * 有时可能会发生线程被唤醒，但实际上并没有满足条件。
- *
+ * <p>
  * 我们还可以定义一个检查来避免虚假的唤醒 - 一个线程可以在没有收到通知的情况下从等待中醒来。
  */
 public class Data {
