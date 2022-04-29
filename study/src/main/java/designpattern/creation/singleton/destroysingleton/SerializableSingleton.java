@@ -21,6 +21,9 @@ public class SerializableSingleton implements Serializable {
     /**
      * 用到了桥接模式，防止序列化，反序列化破坏单例
      * @see ObjectInputStream#readObject()
+     * @see ObjectInputStream#readObject0(Class, boolean)
+     * @see ObjectInputStream#readOrdinaryObject(boolean)
+     * @see java.io.ObjectStreamClass#invokeReadResolve(Object)
      */
     private Object readResolve() {
         return INSTANCE;
