@@ -15,10 +15,10 @@ public class Test {
     public static void main(String[] args) {
         PaymentFactory paymentFactory = new AliPaymentFactory();
         IPayment payment = paymentFactory.createPayment();
-        payment.pay(new BigDecimal(2333.33));
+        payment.pay(new BigDecimal("2333.33"));
 
         paymentFactory = new WechatPaymentFactory();
         payment = paymentFactory.createPayment();
-        payment.pay(new BigDecimal(2333.33));
+        payment.pay(new BigDecimal("2333.33"));
     }
 }

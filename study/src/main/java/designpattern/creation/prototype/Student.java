@@ -1,5 +1,10 @@
 package designpattern.creation.prototype;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student implements Cloneable {
     private int id;
     private String name;
